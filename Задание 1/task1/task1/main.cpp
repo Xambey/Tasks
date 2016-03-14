@@ -19,16 +19,15 @@ void print(int** P, int n)
 
 int GetSum(int** P, int n)
 {
-	int k(1), sum(0);
-	for (int i(n - 1); i >= 0; i--)
+	int sum(0);
+	for (int i(n -1); i >= 0; i--)
 	{
-		if (k == n) return sum;
-		for (int j(k); j < n; j++)
+		for (int j(n - i); j < n; j++)
 		{
 			sum += P[i][j];
 		}
-		k++;
 	}
+	return sum;
 }
 
 int main(int argc, char** argv)
