@@ -1,15 +1,17 @@
 #pragma once
 #include <string>
-
+#include <iostream>
 class Transfer //абстрактный класс
 {
 public:
 	std::string destination; //пункт назначения
-	std::string good_name; //название товара
-	std::string arrival_time; // время и дата прибытия
+	char* good_name; //название товара
+	static char* number_cars; // номера машин
+	static int index; //число элементов numbers_cars на данный момент
 
 	virtual void print() = 0; // чисто виртуальная ф-ция,
-	Transfer(); // ОБЪЕКТ НЕ СОЗДАЕТСЯ
+	Transfer(); 
+	Transfer(char* good_name);
 	virtual ~Transfer(); // виртуальный диструктор
 };
 

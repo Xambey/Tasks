@@ -1,17 +1,17 @@
 #pragma once
-#include <cstring>
+#include <string>
 
 class Transport //класс имеющий информацию о машине
 {
 public:
 	double distance; // дистанция
-	char* number_cars; // номера машин
-	char* departure_time; // время и дата выезда
+	double departure_time; // время выезда
+	double arrival_time; // время прибытия
 	double average_speed; // средняя скорость
+	int begin; // индекс начала номера для данной машины
+	int end; // индекс конца номера для данной машины
 
-	friend void run(); // время в пути
 	Transport();
-	Transport(int distance, char* number_cars, char* departure_time, double average_speed);
 	virtual ~Transport();
 };
 
