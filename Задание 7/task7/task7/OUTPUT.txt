@@ -1,0 +1,19 @@
+
+Destination: Moscow
+Good name: water
+Arrival time: 19 hours
+Departure time: 12 hours
+Average speed: 12 kilometers/hour
+Number of car: XYZ391
+Distance: 420 kilometers
+Transfer time: 7 hours
+
+Destination: New-York
+Good name: fishes
+Arrival time: 6 hours
+Departure time: 9 hours
+Average speed: 9 kilometers/hour
+Number of car: FCD124
+Distance: 1575 kilometers
+Transfer time: 21 hours
+

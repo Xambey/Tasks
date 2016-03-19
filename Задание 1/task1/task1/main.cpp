@@ -5,7 +5,7 @@
 
 using namespace std;
 
-void print(int** P, int n)
+void print(int** P, int n) //вывод матрицы
 {
 	cout << endl << "Матрица: " << endl;
 	for (int i(0); i < n; i++) {
@@ -17,7 +17,7 @@ void print(int** P, int n)
 	cout << endl;
 }
 
-int GetSum(int** P, int n)
+int GetSum(int** P, int n) //получить сумму элементов ниже доп. диагонали
 {
 	int sum(0);
 	for (int i(n -1); i >= 0; i--)

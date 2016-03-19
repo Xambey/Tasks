@@ -6,8 +6,8 @@ template <typename T> //шаблон
 class Order
 {
 private:
-	T N;
-	T* order;
+	T N; //число элементов
+	T* order; //последовательность
 public:
 	Order();
 	Order(int value); // инициализация размера и значений массива
@@ -60,16 +60,15 @@ void Order<T>::print()
 template <typename T>
 void Order<T>::set(int value)
 {
-	delete[] order;
+	if (order)
+		delete[] order;
 	N = value;
 	order = new T[value];
 	std::cout << "Order with size = " << N << std::endl;
 	for (int i(0); i < N; i++)
 	{
-		std::cout << i + 1 << " element = ";
+		std::cout << "Enter " << i + 1 << " element = ";
 		std::cin >> order[i];
 	}
 	std::cout << std::endl;
 }
-
-

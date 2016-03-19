@@ -5,12 +5,12 @@
 int main(int argc, char** argv)
 {
 	std::ofstream op("output.txt"); //создание потока для вывода в файл
-	op.clear(); //очистка файла
-
+	
 	if (!op.is_open()) { //проверка что файл открыт
 		std::cout << "Error open" << std::endl;
-		return 1;
+		return EXIT_FAILURE;
 	}
+	op.clear(); //очистка файла
 
 	String s1("i'm static object1"), s2("i'm static object1");
 	String* p1 = new String ("it's first string" );
@@ -49,5 +49,5 @@ int main(int argc, char** argv)
 
 	op.close();
 	system("pause");
-	return 0;
+	return EXIT_SUCCESS;
 }

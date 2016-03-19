@@ -19,10 +19,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{66F32D77-7C9D-47B0-96F7-C9D032AD969E}</ProjectGuid>
-    <RootNamespace>task5</RootNamespace>
+    <ProjectGuid>{8F3DB263-0B81-42DE-9E53-F5BBAB5F6950}</ProjectGuid>
+    <RootNamespace>Tasks</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
-    <ProjectName>task5</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -111,13 +110,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="X.cpp" />
-    <ClCompile Include="Y.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="X.h" />
-    <ClInclude Include="Y.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

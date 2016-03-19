@@ -2,6 +2,7 @@
 
 Transport::Transport()
 {
+	time = 0;
 	distance = 0;
 	average_speed = 0;
 	arrival_time = 6.00;

@@ -1,11 +1,11 @@
 #include "Y.h"
 
-Y::Y(int a, int b, int c) :X(a, b)
+Y::Y(int a, int b, int c) : X(a, b)
 {
 	y = new int;
 	*y = c;
 }
-	
+
 void Y::view()
 {
 	std::cout << "x1 = " << *x1 << " x2 = " << *x2 << " y = " << *y << std::endl;

@@ -1,10 +1,9 @@
 #include "A.h"
 
 A::A(double x, double y, double z):v(0) {
-	this->x = x; //инициализация переменных
-	this->y = y;
-	this->z = z;
+	set(x, y, z);
 };
+
 void A::set(double x, double y, double z)
 {
 	this->x = x; //установка новых значений

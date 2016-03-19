@@ -8,6 +8,6 @@ int main (int argc, char** argv)
 	run(*obj);
 	print(*obj);
 
-	obj->~X(); //вызов деструктора (уничтожение объекта)
+	delete obj;
 	return 0;
 }

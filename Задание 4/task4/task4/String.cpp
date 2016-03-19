@@ -1,8 +1,6 @@
 #define _CRT_SECURE_NO_WARNINGS
-#include "String.h"
-
 #define SIZE 255
-#include <complex>
+#include "String.h"
 
 String::String() 
 {
@@ -11,27 +9,27 @@ String::String()
 	value[0] = '\0'; //добавляем символ конца строки, это обязательно
 	new_value[0] = '\0';
 }
-String::~String() { delete[]value; delete[]new_value; std::cout << "all values is void " << std::endl; }
 
-String::String(char*str)
+String::~String() 
+{ 
+	delete[] value;
+	delete[] new_value; 
+	std::cout << "all values is void " << std::endl;
+}
+
+String::String(char*str) : String::String()
 {
-	value = new char[SIZE];
-	new_value = new char[SIZE];
-	value[0] = '\0'; //добавляем символ конца строки, это обязательно
-	new_value[0] = '\0';
 	strcpy(value, str); //присваиваем value значение введенное параметром при создании строки 
 }
 
 String& String::operator=(String& s) //оператор присваивания строки s1 в s2
 {
-		if (this == &s) {
-			return *this;
-		}
+	if (this != &s)
+	{
 		for (int i(0); i < SIZE; i++)
-		{
-			value[i] = s.value[i]; 
-		}
-		return *this; //возвращаем текущий объект, так просто не понять, гугли перегрузка операторов с++
+			value[i] = s.value[i];
+	}
+	return *this; //возвращаем текущий объект, так просто не понять, гугли перегрузка операторов с++
 }
 
 void String::print() //вывод полученной строки посимвольно
